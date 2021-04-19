@@ -1,11 +1,7 @@
 import PropTypes from 'prop-types';
 
-const Button = ({ onClick, className, value, type }) => {
-  return (
-    <button onClick={onClick} className={className} type={type}>
-      {value}
-    </button>
-  );
+const Button = ({ value, ...props }) => {
+  return <button {...props}>{value}</button>;
 };
 Button.propTypes = {
   onClick: PropTypes.func,
